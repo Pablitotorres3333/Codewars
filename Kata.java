@@ -23,4 +23,22 @@ public class Kata {
 		
 		return returnValue;
 	}
+	
+	//Check if you are better than the average of your clasroom.
+	public static boolean betterThanAverage(int[] classPoints, int yourPoints) {
+		boolean returnValue;
+		int average = 0;
+		
+		//Compute the average:
+		for(int score : classPoints)
+		{
+			average += score;
+		}
+		average /= classPoints.length;
+		
+		//Compare:
+		returnValue = (yourPoints > average) ? true : false;
+		
+		return returnValue;
+	}
 }
